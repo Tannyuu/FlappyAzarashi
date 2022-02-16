@@ -51,6 +51,11 @@ public class AzarashiController : MonoBehaviour
             return;
         }
 
+        if (rb2d.isKinematic)
+        {
+            return;
+        }
+
         rb2d.velocity = new Vector2(0.0f, flapVelocity);
     }
 
@@ -77,6 +82,14 @@ public class AzarashiController : MonoBehaviour
         {
             return;
         }
+
+        Camera.main.SendMessage("Clash");
+
         isDead = true;
+    }
+
+    public void SetSteerActive(bool active)//trueを入れると動く
+    {
+        rb2d.isKinematic = !active;
     }
 }

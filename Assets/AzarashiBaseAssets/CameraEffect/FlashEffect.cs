@@ -8,8 +8,9 @@ class FlashEffect : MonoBehaviour
 
     public static void Play()
     {
-        GameObject go = new GameObject("Flash");
-        go.AddComponent<FlashEffect>();
+        GameObject go = new GameObject("Flash");//Flashという名前のゲームオブジェクトを作る
+        go.AddComponent<FlashEffect>();//FlashEffectという名前のスクリプト(このスクリプト)をアタッチする
+        //Debug.Break();//一時停止
     }
 
     void Awake()
@@ -38,7 +39,7 @@ class FlashEffect : MonoBehaviour
 
         if (alpha == 0.0f)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);//Flashという名前のゲームオブジェクトを消す
         }
     }
 

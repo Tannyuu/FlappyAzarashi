@@ -7,7 +7,7 @@ public class Block : MonoBehaviour
     public float minHeight;
     public float maxHeight;
     public GameObject root;
-    public Transform bottomBlock;
+    //public Transform bottomBlock;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,10 @@ public class Block : MonoBehaviour
         float height = Random.Range(minHeight, maxHeight);
         root.transform.localPosition = new Vector3(0.0f, height, 0.0f);
 
-        
+        /*
         float offset = Random.Range(-2f, 2f);
         bottomBlock.localPosition = new Vector3(0f, offset, 0f);
-        
+        */
     }
 
     void OnScrollEnd()
